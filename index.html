@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agentic AI Engineer — AI Systems Architect</title>
+  <meta name="description" content="Portfolio of an Agentic AI and Generative AI Engineer. Building agents that retrieve context, use tools, execute workflows, and complete real business tasks.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cinzel+Decorative:wght@700;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- AMBIENT TOGGLE -->
+  <button class="aura-toggle" id="soundToggle" aria-label="Toggle ambient sound">
+    <span class="aura-dot"></span>
+    <span class="aura-label" id="auraLabel">AURA OFF</span>
+  </button>
+
+  <!-- NAVIGATION -->
+  <header class="site-nav" id="mainNav">
+    <div class="nav-brand">
+      <div class="brand-orb"></div>
+      <span class="brand-name">SANCTORUM<span class="brand-accent">.AI</span></span>
+    </div>
+    <nav class="nav-links" role="navigation">
+      <a href="#genesis" class="nav-link" data-section="genesis">Genesis</a>
+      <a href="#essence" class="nav-link" data-section="essence">Essence</a>
+      <a href="#dimensions" class="nav-link" data-section="dimensions">Dimensions</a>
+      <a href="#constellation" class="nav-link" data-section="constellation">Constellation</a>
+      <a href="#transmit" class="nav-link" data-section="transmit">Transmit</a>
+    </nav>
+    <a href="#transmit" class="nav-contact-btn">Open to Work</a>
+  </header>
+
+  <!-- ============================================================
+       CINEMATIC INTRO — Intro.mp4
+       ============================================================ -->
+  <div class="intro-screen" id="introScreen">
+    <video id="introVideo" playsinline preload="auto" muted>
+      <source src="Intro.mp4" type="video/mp4">
+    </video>
+    <div class="intro-veil"></div>
+    <div class="intro-ui">
+      <div class="intro-eyebrow">
+        <span class="intro-dot"></span>
+        <span>INITIALIZING</span>
+      </div>
+      <h1 class="intro-heading">THE SANCTORUM<br>OF INTELLIGENCE</h1>
+      <p class="intro-body">Agentic AI &amp; Generative AI Engineering</p>
+      <div class="intro-actions">
+        <button id="enterBtn" class="btn-primary">Enter</button>
+        <button id="skipBtn" class="btn-ghost">Skip</button>
+      </div>
+      <div class="intro-progress-wrap">
+        <div class="intro-progress-bar" id="introProgressBar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       MAIN CONTENT
+       ============================================================ -->
+  <main>
+
+    <!-- ============================================================
+         SECTION 1: HERO — Sanctum Clip.mp4 scroll-scrubbed
+         Architecture: outer .scrub-section gives scroll travel
+                       inner .scrub-pin is the GSAP-pinned viewport
+         ============================================================ -->
+    <section class="scrub-section" id="genesis">
+      <div class="scrub-pin" id="sanctumPin">
+
+        <!-- Video Layer -->
+        <div class="video-layer">
+          <video id="sanctumVideo" class="scrub-video" playsinline preload="auto" muted>
+            <source src="Sanctum Clip.mp4" type="video/mp4">
+          </video>
+          <div class="video-grade"></div>
+          <div class="video-vignette"></div>
+        </div>
+
+        <!-- Scroll progress HUD (right edge) -->
+        <div class="scrub-hud" id="sanctumHud">
+          <div class="hud-line">
+            <div class="hud-needle" id="sanctumNeedle"></div>
+          </div>
+          <span class="hud-text">SCROLL</span>
+        </div>
+
+        <!-- HERO STAGE — fades out at ~40% progress -->
+        <div class="content-stage" id="heroStage">
+          <div class="hero-content" id="essence-anchor">
+            <p class="eyebrow" id="genesisEyebrow">
+              <span class="eyebrow-glyph">⌬</span>
+              Agentic AI &nbsp;&bull;&nbsp; Generative AI &nbsp;&bull;&nbsp; AI Automation
+            </p>
+            <h1 class="hero-headline">
+              <span class="headline-sup">Engineering the</span>
+              <span class="headline-main">Agentic<br>Dimension</span>
+            </h1>
+            <p class="hero-body">
+              I build AI agents that retrieve context, use tools,<br>
+              execute multi-step workflows, and complete real tasks—<br>
+              end-to-end, in production.
+            </p>
+            <div class="hero-actions">
+              <a href="#dimensions" class="btn-primary">View Work</a>
+              <a href="#transmit" class="btn-ghost">Get in Touch</a>
+            </div>
+            <div class="hero-facts">
+              <div class="fact">
+                <span class="fact-key">Agentic Systems</span>
+                <span class="fact-val">Multi-Agent Orchestration</span>
+              </div>
+              <div class="fact-sep"></div>
+              <div class="fact">
+                <span class="fact-key">Knowledge Systems</span>
+                <span class="fact-val">RAG &amp; Vector Search</span>
+              </div>
+              <div class="fact-sep"></div>
+              <div class="fact">
+                <span class="fact-key">Automation</span>
+                <span class="fact-val">Tool Use &amp; MCP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ABOUT STAGE — enters at ~55% progress, id="essence" for nav -->
+        <div class="content-stage content-stage--hidden" id="aboutStage">
+          <div class="about-content" id="essence">
+            <div class="section-eyebrow">Architect Essence</div>
+            <h2 class="section-heading">
+              I build systems that<br>
+              <span class="text-gold">act, not just respond.</span>
+            </h2>
+            <p class="about-lead">
+              Most AI integrations stop at the chat interface. I work at the layer beneath—
+              designing agents that plan sequences of actions, call real tools, verify their own outputs,
+              and recover from failures without human intervention.
+            </p>
+            <div class="about-pillars">
+              <div class="pillar">
+                <span class="pillar-num">01</span>
+                <div class="pillar-body">
+                  <h3>Multi-Agent Orchestration</h3>
+                  <p>LangGraph, CrewAI, AutoGen—supervisor and worker agents that delegate, critique, and self-correct across long-horizon tasks.</p>
+                </div>
+              </div>
+              <div class="pillar">
+                <span class="pillar-num">02</span>
+                <div class="pillar-body">
+                  <h3>Retrieval &amp; Knowledge Systems</h3>
+                  <p>Hybrid dense-sparse search, graph retrieval, dynamic reranking, and memory persistence for accurate, grounded responses at scale.</p>
+                </div>
+              </div>
+              <div class="pillar">
+                <span class="pillar-num">03</span>
+                <div class="pillar-body">
+                  <h3>Tool Use &amp; Automation</h3>
+                  <p>MCP-native function calling, sandboxed code execution, browser automation, and enterprise API integrations with full observability.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 2: DIMENSIONS — mirror dimension.mp4 scroll-scrubbed
+         ============================================================ -->
+    <section class="scrub-section" id="dimensions">
+      <div class="scrub-pin" id="mirrorPin">
+
+        <!-- Video Layer -->
+        <div class="video-layer">
+          <video id="mirrorVideo" class="scrub-video" playsinline preload="auto" muted>
+            <source src="mirror dimension.mp4" type="video/mp4">
+          </video>
+          <div class="video-grade video-grade--mirror"></div>
+          <div class="video-vignette"></div>
+        </div>
+
+        <!-- Scroll progress HUD -->
+        <div class="scrub-hud" id="mirrorHud">
+          <div class="hud-line">
+            <div class="hud-needle" id="mirrorNeedle"></div>
+          </div>
+          <span class="hud-text">SCROLL</span>
+        </div>
+
+        <!-- EXPERIENCE STAGE — fades out at ~42% progress -->
+        <div class="content-stage" id="experienceStage">
+          <div class="exp-content">
+            <div class="section-eyebrow emerald">Career Timeline</div>
+            <h2 class="section-heading">
+              Work &amp; <span class="text-emerald">Experience</span>
+            </h2>
+            <div class="timeline">
+
+              <div class="timeline-entry">
+                <div class="timeline-meta">
+                  <span class="timeline-period">2024 — Present</span>
+                  <span class="timeline-org">Placeholder Company</span>
+                </div>
+                <div class="timeline-detail">
+                  <h3 class="timeline-role">Agentic AI Engineer</h3>
+                  <p>
+                    Designed and deployed multi-agent orchestration systems using LangGraph and AutoGen. Built MCP-native tool integrations enabling agents to perform end-to-end enterprise workflows with sandboxed code execution and automatic quality verification.
+                  </p>
+                  <div class="stack-tags">
+                    <span>LangGraph</span>
+                    <span>MCP</span>
+                    <span>Claude API</span>
+                    <span>FastAPI</span>
+                    <span>Docker</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-entry">
+                <div class="timeline-meta">
+                  <span class="timeline-period">2023 — 2024</span>
+                  <span class="timeline-org">Placeholder Company</span>
+                </div>
+                <div class="timeline-detail">
+                  <h3 class="timeline-role">Generative AI Engineer</h3>
+                  <p>
+                    Built enterprise RAG pipelines serving millions of documents. Implemented hybrid dense-sparse retrieval with cross-encoder reranking, reducing hallucination rates and improving answer grounding on internal knowledge bases.
+                  </p>
+                  <div class="stack-tags">
+                    <span>LlamaIndex</span>
+                    <span>Qdrant</span>
+                    <span>Milvus</span>
+                    <span>OpenAI</span>
+                    <span>Python</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-entry">
+                <div class="timeline-meta">
+                  <span class="timeline-period">2022 — 2023</span>
+                  <span class="timeline-org">Placeholder Company</span>
+                </div>
+                <div class="timeline-detail">
+                  <h3 class="timeline-role">AI / ML Engineer</h3>
+                  <p>
+                    Fine-tuned open-weights LLMs (Llama 2, Mistral) using QLoRA for domain-specific tasks. Deployed quantized models with vLLM for low-latency inference in latency-sensitive production environments.
+                  </p>
+                  <div class="stack-tags">
+                    <span>LoRA / QLoRA</span>
+                    <span>HuggingFace</span>
+                    <span>vLLM</span>
+                    <span>PyTorch</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECTS STAGE — enters at ~55% progress -->
+        <div class="content-stage content-stage--hidden" id="projectsStage">
+          <div class="projects-content">
+            <div class="section-eyebrow cyan">Mirror Dimension &bull; Core Archetypes</div>
+            <h2 class="section-heading">
+              Built &amp; <span class="text-cyan">Shipped</span>
+            </h2>
+            <div class="projects-grid">
+
+              <div class="project-item">
+                <div class="project-number">01</div>
+                <div class="project-body">
+                  <div class="project-type">Multi-Agent Systems</div>
+                  <h3 class="project-title">Agent Orchestration Platform</h3>
+                  <p class="project-desc">
+                    A supervisor-worker architecture where a planning agent decomposes tasks into a directed acyclic graph, dispatches to specialized worker agents, and verifies results in isolated sandboxes before returning outputs.
+                  </p>
+                  <div class="stack-tags">
+                    <span>LangGraph</span>
+                    <span>FastAPI</span>
+                    <span>Redis</span>
+                    <span>Docker</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-item">
+                <div class="project-number">02</div>
+                <div class="project-body">
+                  <div class="project-type">Enterprise Generative AI</div>
+                  <h3 class="project-title">Enterprise RAG Engine</h3>
+                  <p class="project-desc">
+                    Hybrid vector + BM25 retrieval pipeline with query decomposition, contextual reranking, and self-reflection loops. Handles multi-turn conversation over large internal document corpora with verifiable citations.
+                  </p>
+                  <div class="stack-tags">
+                    <span>Qdrant</span>
+                    <span>DSPy</span>
+                    <span>LangChain</span>
+                    <span>Gemini</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-item">
+                <div class="project-number">03</div>
+                <div class="project-body">
+                  <div class="project-type">AI Automation</div>
+                  <h3 class="project-title">Autonomous Code &amp; Repair Agent</h3>
+                  <p class="project-desc">
+                    An agent that reads codebases, writes implementations, executes tests, reads error output, and iteratively repairs failures—completing engineering tasks end-to-end without human handoff.
+                  </p>
+                  <div class="stack-tags">
+                    <span>Python</span>
+                    <span>Playwright</span>
+                    <span>Tree-Sitter</span>
+                    <span>MCP</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 3: CONSTELLATION — Skills (Sanctorum image.png as background art)
+         ============================================================ -->
+    <section class="constellation-section" id="constellation">
+
+      <div class="constellation-bg">
+        <img src="Sanctorum image.png" alt="" class="constellation-art" aria-hidden="true">
+        <div class="constellation-overlay"></div>
+      </div>
+
+      <div class="constellation-body">
+
+        <div class="constellation-header">
+          <div class="section-eyebrow">Skill Map</div>
+          <h2 class="section-heading">THE SANCTORUM<br><span class="text-gold">CONSTELLATION</span></h2>
+          <p class="constellation-intro">Eight domains. Hover to explore the tools and frameworks within each.</p>
+        </div>
+
+        <!-- SVG Conduits -->
+        <div class="constellation-field">
+          <svg class="conduit-svg" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <defs>
+              <linearGradient id="lineGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#ffb84d" stop-opacity="0.6"/>
+                <stop offset="100%" stop-color="#ff9100" stop-opacity="0.3"/>
+              </linearGradient>
+              <linearGradient id="lineEmerald" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00e599" stop-opacity="0.5"/>
+                <stop offset="100%" stop-color="#ffb84d" stop-opacity="0.3"/>
+              </linearGradient>
+            </defs>
+            <!-- Primary connections -->
+            <line x1="600" y1="80"  x2="240" y2="180" class="conduit conduit--primary"/>
+            <line x1="600" y1="80"  x2="960" y2="180" class="conduit conduit--primary"/>
+            <line x1="240" y1="180" x2="160" y2="420" class="conduit conduit--secondary"/>
+            <line x1="400" y1="320" x2="240" y2="180" class="conduit conduit--secondary"/>
+            <line x1="400" y1="320" x2="600" y2="80"  class="conduit conduit--secondary"/>
+            <line x1="400" y1="320" x2="780" y2="310" class="conduit conduit--secondary"/>
+            <line x1="400" y1="320" x2="600" y2="480" class="conduit conduit--secondary"/>
+            <line x1="780" y1="310" x2="960" y2="180" class="conduit conduit--secondary"/>
+            <line x1="780" y1="310" x2="600" y2="480" class="conduit conduit--secondary"/>
+            <line x1="780" y1="310" x2="990" y2="430" class="conduit conduit--secondary"/>
+          </svg>
+
+          <!-- Nodes -->
+          <div class="altar-field">
+
+            <div class="altar" style="top:8%;left:50%" data-node="codex">
+              <div class="altar-orb altar-orb--emerald">
+                <span>COD</span>
+              </div>
+              <div class="altar-label">
+                <strong>CODEX</strong>
+                <em>Knowledge Systems</em>
+              </div>
+              <div class="altar-tooltip">
+                <h4>Knowledge &amp; Vector DBs</h4>
+                <p>Enterprise RAG pipelines, hybrid dense-sparse retrieval, graph schemas and metadata filtering.</p>
+                <div class="tooltip-tags">
+                  <span>Milvus</span><span>Pinecone</span><span>Qdrant</span><span>Chroma</span><span>Neo4j</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="altar" style="top:22%;left:20%" data-node="nexus">
+              <div class="altar-orb altar-orb--amber">
+                <span>NEX</span>
+              </div>
+              <div class="altar-label">
+                <strong>NEXUS</strong>
+                <em>Multi-Agent</em>
+              </div>
+              <div class="altar-tooltip">
+                <h4>Agent Orchestration</h4>
+                <p>State-machine graphs, supervisor-worker hierarchies, reflection and self-correction loops.</p>
+                <div class="tooltip-tags">
+                  <span>LangGraph</span><span>CrewAI</span><span>AutoGen</span><span>LangChain</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="altar" style="top:22%;left:80%" data-node="forge">
+              <div class="altar-orb altar-orb--amber">
+                <span>FOR</span>
+              </div>
+              <div class="altar-label">
+                <strong>FORGE</strong>
+                <em>Engineering</em>
+              </div>
+              <div class="altar-tooltip">
+                <h4>LLM Serving &amp; APIs</h4>
+                <p>High-throughput async APIs, streaming token delivery, model quantization, low-latency serving.</p>
+                <div class="tooltip-tags">
+                  <span>FastAPI</span><span>Python</span><span>vLLM</span><span>Triton</span><span>WebSockets</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="altar" style="top:50%;left:33%" data-node="cloudspire">
+              <div class="altar-orb altar-orb--amber">
+                <span>CLO</span>
+              </div>
+              <div class="altar-label">
+                <strong>CLOUDSPIRE</strong>
+                <em>Infrastructure</em>
+              </div>
+              <div class="altar-tooltip">
+                <h4>Cloud &amp; Scale</h4>
+                <p>Containerised workloads, GPU cluster orchestration, serverless inference endpoints, telemetry.</p>
+                <div class="tooltip-tags">
+                  <span>Docker</span><span>Kubernetes</span><span>AWS</span><span>Terraform</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="altar" style="top:48%;left:65%" data-node="archive">
+              <div class="altar-orb altar-orb--amber">
+                <span>ARC</span>
+              </div>
+              <div class="altar-label">
+                <strong>ARCHIVE</strong>
+                <em>Automation</em>
+              </div>
+              <div class="altar-tooltip">
+                <h4>Tool Use &amp; MCP</h4>
+                <p>Model Context Protocol integrations, browser control, sandboxed code execution, API schemas.</p>
+                <div class="tooltip-tags">
+                  <span>MCP</span><span>Playwright</span><span>Function Calling</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="altar" style="top:72%;left:13%" data-node="portal">
+              <div class="altar-orb altar-orb--emerald">
+                <span>POR</span>
+              </div>
+              <div class="altar-label">
+                <strong>PORTAL</strong>
+                <em>Front-End</em>
+              </div>
+              <div class="altar-tooltip">
+                <h4>AI Interfaces</h4>
+                <p>Generative UI, streaming conversational canvases, real-time dashboards, human-in-the-loop design.</p>
+                <div class="tooltip-tags">
+                  <span>React</span><span>Next.js</span><span>TypeScript</span><span>Canvas</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="altar" style="top:77%;left:50%" data-node="observatory">
+              <div class="altar-orb altar-orb--amber">
+                <span>OBS</span>
+              </div>
+              <div class="altar-label">
+                <strong>OBSERVATORY</strong>
+                <em>Evaluation</em>
+              </div>
+              <div class="altar-tooltip">
+                <h4>LLM Evals &amp; Tracing</h4>
+                <p>Agent trajectory evaluation, hallucination detection, prompt optimisation, production observability.</p>
+                <div class="tooltip-tags">
+                  <span>Langfuse</span><span>Ragas</span><span>DSPy</span><span>W&amp;B</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="altar" style="top:72%;left:83%" data-node="sanctum">
+              <div class="altar-orb altar-orb--emerald">
+                <span>SAN</span>
+              </div>
+              <div class="altar-label">
+                <strong>SANCTUM</strong>
+                <em>AI Products</em>
+              </div>
+              <div class="altar-tooltip">
+                <h4>Production AI Systems</h4>
+                <p>End-to-end deployment, safety guardrails, enterprise compliance, autonomous system monitoring.</p>
+                <div class="tooltip-tags">
+                  <span>Guardrails AI</span><span>Llama Guard</span><span>CI/CD</span>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /altar-field -->
+        </div><!-- /constellation-field -->
+
+        <!-- Mobile fallback -->
+        <div class="skills-mobile-grid">
+          <div class="skill-row"><span class="skill-tag emerald">CODEX</span><span>Knowledge &amp; Vector DBs — Milvus, Pinecone, Qdrant, Chroma</span></div>
+          <div class="skill-row"><span class="skill-tag amber">NEXUS</span><span>Agent Orchestration — LangGraph, CrewAI, AutoGen</span></div>
+          <div class="skill-row"><span class="skill-tag amber">FORGE</span><span>LLM Serving — FastAPI, vLLM, Python, WebSockets</span></div>
+          <div class="skill-row"><span class="skill-tag amber">CLOUDSPIRE</span><span>Infrastructure — Docker, Kubernetes, AWS, Terraform</span></div>
+          <div class="skill-row"><span class="skill-tag amber">ARCHIVE</span><span>Tool Use &amp; MCP — Function Calling, Playwright</span></div>
+          <div class="skill-row"><span class="skill-tag emerald">PORTAL</span><span>AI Interfaces — React, Next.js, TypeScript</span></div>
+          <div class="skill-row"><span class="skill-tag amber">OBSERVATORY</span><span>Evals — Ragas, Langfuse, DSPy, W&amp;B</span></div>
+          <div class="skill-row"><span class="skill-tag emerald">SANCTUM</span><span>AI Products — Guardrails, Compliance, CI/CD</span></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 4: CONTACT (no video)
+         ============================================================ -->
+    <section class="contact-section" id="transmit">
+      <div class="contact-inner">
+
+        <div class="contact-header">
+          <div class="section-eyebrow">Transmit</div>
+          <h2 class="section-heading contact-main-heading">
+            LET'S BUILD<br><span class="text-gold">SOMETHING REAL.</span>
+          </h2>
+          <p class="contact-lead">
+            Open to AI engineering roles, consulting engagements, and collaborations on agentic systems, RAG pipelines, and production AI infrastructure.
+          </p>
+        </div>
+
+        <div class="contact-layout">
+
+          <!-- Contact Details -->
+          <div class="contact-coords">
+            <div class="status-line">
+              <span class="status-pip"></span>
+              Available for new work
+            </div>
+            <div class="coord-list">
+              <div class="coord">
+                <span class="coord-label">Email</span>
+                <a href="mailto:you@example.com" class="coord-val">you@example.com</a>
+              </div>
+              <div class="coord">
+                <span class="coord-label">Location</span>
+                <span class="coord-val">Remote — Worldwide</span>
+              </div>
+              <div class="coord">
+                <span class="coord-label">Response</span>
+                <span class="coord-val">Within 24 hours</span>
+              </div>
+            </div>
+            <div class="social-row">
+              <a href="https://github.com" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                GitHub
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                LinkedIn
+              </a>
+              <a href="#transmit" class="social-link" aria-label="Resume">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                Resume
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <form class="contact-form" id="contactForm" onsubmit="event.preventDefault(); handleFormSubmit()">
+            <div class="form-pair">
+              <div class="form-field">
+                <label for="fname">Name</label>
+                <input type="text" id="fname" placeholder="Your name" required>
+              </div>
+              <div class="form-field">
+                <label for="femail">Email</label>
+                <input type="email" id="femail" placeholder="your@email.com" required>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="fsubject">What are you building?</label>
+              <select id="fsubject">
+                <option value="agent">Multi-agent system or automation</option>
+                <option value="rag">RAG or knowledge system</option>
+                <option value="consulting">AI strategy or consulting</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="fmessage">Message</label>
+              <textarea id="fmessage" rows="5" placeholder="Describe your project, timeline, or challenge..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary btn-submit" id="submitBtn">
+              <span class="btn-text">Send Message</span>
+            </button>
+            <p class="form-success hidden" id="formSuccess">
+              Message received — I'll reply within 24 hours.
+            </p>
+          </form>
+
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <div class="brand-orb brand-orb--sm"></div>
+            <span>SANCTORUM.AI</span>
+          </div>
+          <nav class="footer-nav">
+            <a href="#genesis">Genesis</a>
+            <a href="#essence">Essence</a>
+            <a href="#dimensions">Dimensions</a>
+            <a href="#constellation">Constellation</a>
+          </nav>
+          <p class="footer-copy">Agentic AI &amp; Generative AI Engineering Portfolio &mdash; 2026</p>
+        </div>
+      </footer>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
