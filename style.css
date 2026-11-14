@@ -672,21 +672,25 @@ button {
    ABOUT / ESSENCE CONTENT (Dual Left-Right Layout)
    ---------------------------------------------------------------- */
 .about-content {
-  max-width: 1140px;
   width: 100%;
+  max-width: 100%;
   pointer-events: auto;
 }
 
 .about-dual-layout {
   display: grid;
-  grid-template-columns: 1fr 1.15fr;
-  gap: 48px;
+  grid-template-columns: 1fr 1fr;
+  gap: 5vw;
   align-items: center;
+  width: 100%;
 }
 
 .about-left {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 700px;
+  justify-self: start;
 }
 
 .about-lead {
@@ -738,6 +742,9 @@ button {
 .about-right {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 720px;
+  justify-self: end;
 }
 
 .about-pillars {
@@ -782,8 +789,8 @@ button {
    EXPERIENCE CONTENT (Dual Grid Left-Right)
    ---------------------------------------------------------------- */
 .exp-content {
-  max-width: 1160px;
   width: 100%;
+  max-width: 100%;
   pointer-events: auto;
 }
 
@@ -794,6 +801,7 @@ button {
   margin-bottom: 16px;
   flex-wrap: wrap;
   gap: 10px;
+  width: 100%;
 }
 .exp-badge-pill {
   font-family: var(--f-mono);
@@ -816,7 +824,8 @@ button {
 .timeline-dual-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 18px;
+  gap: 2.5vw;
+  width: 100%;
 }
 .timeline-column {
   display: flex;
@@ -905,15 +914,16 @@ button {
    PROJECTS CONTENT (Dual Grid 2x2)
    ---------------------------------------------------------------- */
 .projects-content {
-  max-width: 1160px;
   width: 100%;
+  max-width: 100%;
   pointer-events: auto;
 }
 
 .projects-dual-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 16px 2.5vw;
+  width: 100%;
 }
 .project-card {
   background: rgba(8, 12, 26, 0.82);
@@ -1214,25 +1224,30 @@ button {
   background: var(--c-bg);
   border-top: 1px solid rgba(255,184,77,0.12);
   position: relative;
+  width: 100%;
 }
 
 .contact-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 88px 5vw 90px;
+  width: 100%;
+  max-width: 100%;
+  padding: 88px 5vw 100px;
 }
 
 .contact-layout {
   display: grid;
-  grid-template-columns: 1fr 1.15fr;
-  gap: 56px;
+  grid-template-columns: 1fr 1fr;
+  gap: 6vw;
   align-items: start;
+  width: 100%;
 }
 
-/* Left Column */
+/* Left Column — Anchored properly to the Left */
 .contact-left {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 720px;
+  justify-self: start;
 }
 
 .contact-main-heading {
@@ -1367,12 +1382,21 @@ a.coord-val:hover { color: var(--c-gold); }
   margin-right: 6px;
 }
 
-/* Right Column: Console / Form Card */
+/* Right Column: Anchored properly to the Right */
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 680px;
+  justify-self: end;
+}
+
 .form-container-card {
+  width: 100%;
   background: rgba(8, 12, 26, 0.88);
   border: 1px solid rgba(255, 184, 77, 0.25);
   border-radius: 12px;
-  padding: 26px 30px;
+  padding: 28px 34px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 184, 77, 0.08);
   backdrop-filter: blur(14px);
 }
@@ -1486,10 +1510,12 @@ a.coord-val:hover { color: var(--c-gold); }
   border-top: 1px solid rgba(255,255,255,0.06);
   padding: 32px 5vw;
   background: #020309;
+  width: 100%;
 }
 .footer-inner {
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1530,6 +1556,10 @@ a.coord-val:hover { color: var(--c-gold); }
     grid-template-columns: 1fr;
     gap: 32px;
   }
+  .about-left, .about-right {
+    max-width: 100%;
+    justify-self: stretch;
+  }
   .timeline-dual-grid {
     grid-template-columns: 1fr;
     gap: 16px;
@@ -1541,6 +1571,10 @@ a.coord-val:hover { color: var(--c-gold); }
   .contact-layout {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+  .contact-left, .contact-right {
+    max-width: 100%;
+    justify-self: stretch;
   }
 }
 
