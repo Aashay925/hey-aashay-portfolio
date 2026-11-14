@@ -84,7 +84,7 @@ class RangeRequestHandler(SimpleHTTPRequestHandler):
                     break
                 try:
                     self.wfile.write(data)
-                except (ConnectionResetError, BrokenPipeError):
+                except (ConnectionResetError, BrokenPipeError, ConnectionAbortedError, OSError):
                     break
                 remaining -= len(data)
 

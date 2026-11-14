@@ -1,18 +1,17 @@
-# Sanctorum — Agentic AI & Generative AI Portfolio
+# Aashay Soni — Generative AI & Automation Engineer Portfolio
 
-A cinematic, interactive portfolio showcasing work in Agentic AI and Generative AI systems, inspired by the mystical Sanctorum / Mirror Dimension visual aesthetic.
+A cinematic, interactive portfolio showcasing production work in Agentic AI, Generative AI, RAG pipelines, and Enterprise Automation, inspired by the mystical Sanctorum / Mirror Dimension visual aesthetic.
 
-## Features
-- **GSAP ScrollTrigger Video Scrubbing**: Frame-accurate, bidirectional scroll-driven video parallax background without autoplay.
-- **Cinematic Visual Language**: Deep obsidian palette with warm amber, gold, and cyan accents.
-- **Interactive HUD & Sections**:
-  - Genesis (Hero & AI Archetype)
-  - Essence (About & Agentic Philosophy)
-  - Dimensions (Work Experience & Featured Projects)
-  - Constellation (Skills & Architecture Matrix)
-  - Transmit (Direct Contact Terminal)
+## 🚀 Live Sections
+- **Genesis**: Hero stage featuring production AI systems overview and core focus areas.
+- **Essence**: Engineering philosophy, B.Tech credentials, hackathon recognition, and the 3 architectural pillars.
+- **Dimensions**:
+  - **Work & Experience**: Hemisphere, Sreemoyee Enterprises, Nexora, and Sworn Techware Ltd.
+  - **Built & Shipped Projects**: WhatsApp Campaigns Automation Tool, KABPL Quiz App (RAG Assistant), Crowdsourced Civic Issue Resolution PWA, and Zoho Workflows Suite.
+- **Constellation**: Interactive 8-domain skill matrix spanning Vector DBs, Agentic AI, GenAI LLMs, Cloud/APIs, Zoho Automation, Full-Stack UI, ML, and Embedded Systems.
+- **Transmit**: Direct contact console and terminal communication channels.
 
-## Tech Stack
-- **Frontend**: HTML5, Vanilla CSS, Vanilla JavaScript
-- **Animation Engine**: GSAP (GreenSock) & ScrollTrigger
-- **Local Dev Server**: Python HTTP byte-range server (`server.py`) for partial content streaming during development
+## 🛠️ Tech Stack
+- **Frontend**: HTML5, Vanilla Modern CSS, Vanilla JavaScript
+- **Animation & Motion**: GSAP (GreenSock) & ScrollTrigger with frame-accurate video scrubbing
+- **Dev Server**: Range-enabled Python server (`server.py`) supporting HTTP 206 Partial Content streaming
